@@ -7,11 +7,13 @@ int main() {
     scanf("%d", &n);
 
     while (n > 0) {
-        count += (n & 1);
-        n >>= 1;
+       if(n%2==1){
+        count++;
+       }
+        n = n / 2;
     }
 
-    printf("Number of set bits = %d", count);
+    printf("Number of set bits = %d\n", count);
 
     return 0;
 }
